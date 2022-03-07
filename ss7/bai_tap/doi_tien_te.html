@@ -15,7 +15,7 @@
         <td><input type="text" id="c"></td>
         <td><select name="" id="viet">
             <option value="a">VNĐ</option>
-            <option value="b">USd</option>
+            <option value="b">USD</option>
         </select></td>
         <td>
             <select name="" id="salec">
@@ -30,16 +30,13 @@
     function doitien() {
         let dauvao = document.getElementById('c').value;
         let viet = document.getElementById('viet').value;
-        let salec = document.getElementById('salec').value;
-        if ( 'viet' == salec){
-            alert(dauvao);
+        if ( viet === 'a'){
+            var c=dauvao/23000;
+            alert(c);
         }
-        if (viet=='a' && salec == 'b'){
-            alert(dauvao/23000);
-        }
-        if (viet==b && salec == a){
-            alert(dauvao*23000);
-        }
+        else {var c=23000*dauvao}
+        alert(c);
+
 
     }
 </script>
