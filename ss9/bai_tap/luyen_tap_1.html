@@ -7,11 +7,11 @@
 <body>
 <table>
     <tr>
-        <th>Bài tập 1</th></br>
+        <th style="background-color: burlywood">Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không</th></br>
     </tr>
     <tr>
-        <td> số a<input type="text" id="1"></td>
-        <td> số b<input type="text" id="2"></td>
+        <td> <input type="text" id="1" placeholder="Số A">
+         <input type="text" id="2" placeholder="Số B"></td>
     </tr>
     <tr>
         <td><button onclick="c()">Result</button></td>
@@ -19,14 +19,167 @@
 </table>
 <script>
     function c() {
-        let a=document.getElementById('1')
-        let b=document.getElementById('2')
+        let a=document.getElementById('1').value;
+        let b=document.getElementById('2').value;
         if (a%b===0){
             alert('a chia hết cho b')
-        }else ('a không chia hết cho b')
+        }else{
+            alert('a không chia hết cho b')}
 
     }
 </script>
+<table>
+    <tr>
+    <th style="background-color: bisque">Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="tuoi" placeholder="Nhập tuổi"></td>
+    </tr>
+    <tr>
+        <td><button onclick="old()">Xác nhận</button></td>
+    </tr>
+</table>
+<script>
+    function old() {
+        let sotuoi=document.getElementById('tuoi').value;
+        if (sotuoi < 15){
+            alert('Không đủ điều kiện')
+        } else {
+            alert('Đủ điều kiện')
+        }
+    }
+</script>
+<table>
+    <tr>
+        <th style="background-color: burlywood">Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0</th>
+    </tr>
+    <tr>
+     <td><input type="text" id="songuyen" placeholder="Nhập số"></td>
+    </tr>
+    <tr>
+        <td><button onclick="so()">Xác nhận</button></td>
+    </tr>
+</table>
+<script>
+    function so() {
+        let number=document.getElementById('songuyen').value;
+        if (number>0){
+            alert('Số này lớn hơn 0')
+        }else {
+            alert('Số này bé hơn 0')
+        }
 
+    }
+</script>
+<table>
+    <tr>
+        <th style="background-color: burlywood">Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó là lớn hay nhỏ hơn 0</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="so1" placeholder="Số 1">
+       <input type="text" id="so2" placeholder="Số 2">
+        <input type="text" id="so3" placeholder="Số 3"></td>
+    </tr>
+    <tr>
+        <td><button onclick="number1()">Xác nhận</button></td>
+    </tr>
+</table>
+<script>
+    function number1() {
+        let ber1=document.getElementById('so1').value;
+        let ber2=document.getElementById('so2').value;
+        let ber3=document.getElementById('so3').value;
+        if (ber1 >= ber2 && ber1 > ber3){
+            alert('Đây là số lớn nhất' + ber1)
+        }else if (ber2 >= ber1 && ber2 > ber3) {
+            alert('Đây là số lớn nhất' + ber2)
+        }  if (ber3 >= ber2 && ber3 > ber1){
+                alert('Đay là số lớn nhất' + ber3)}
+        if (ber2 >= ber3 && ber2>ber1){
+            alert('Đây là số lớn nhất' + ber2)
+        }if (ber1>ber3 && ber1 > ber2){
+            alert('Đây là số lớn nhất' + ber1)
+        }
+    }
+</script>
+<script>
+
+</script>
+<table>
+    <tr>
+        <th>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="kt" placeholder="Điểm kiểm tra">
+            <input type="text" id="gk" placeholder="Điểm giữa kì">
+        <input type="text" id="ck" placeholder="Điểm cuối kì"></td>
+    </tr>
+    <tr>
+        <td><button onclick='diem()'>Xác nhận</button></td>
+    </tr>
+
+</table>
+<table>
+    <tr>
+        <th>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="hoahong" placeholder="Nhập doanh số">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="hh()">Xác nhận</button>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="cuoc" placeholder="Nhập thời gian sử dụng">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="cuocdien()">Xác nhận</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function diem(){
+    let dkt=parseInt(document.getElementById('kt').value);
+    let dgk=parseInt(document.getElementById('gk').value);
+    let dck=parseInt(document.getElementById('ck').value);
+    let tb=(dck+dgk+dkt)/3;
+    if (tb >= 8.0){
+        alert('Học sinh giỏi')
+    }else if (tb>= 6.5){
+        alert('Học sinh khá')
+    }else if (tb >= 5.0){
+        alert('Học sinh trung bình')
+    } else{
+        alert('Học sinh yếu')
+    }}
+    function hh() {
+        let tien=parseInt(document.getElementById('hoahong').value);
+        if (tien<100000000 && tien>0){
+            alert('Hoa hồng:' + tien*20/100)
+        }else {
+            alert('Không có hoa hồng')
+        }
+    }
+    function cuocdien() {
+        let tiencuoc=parseInt(document.getElementById('cuoc').value);
+        let tien=tiencuoc*800
+        alert('Số tiền:' + tien)
+
+    }
+
+
+</script>
 </body>
 </html>

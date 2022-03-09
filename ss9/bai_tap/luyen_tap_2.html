@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Bài 1: Chuyển từ độ C sang độ F.</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="doc" placeholder="Độ C"></td>
+    </tr>
+    <tr>
+        <td><button onclick="doi()">Xác nhận</button></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 2: Chuyển từ mét sang feet:</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="doimet" placeholder="Nhập m"></td>
+    </tr>
+    <tr>
+        <td><button onclick="met()">Xác nhận</button></td>
+    </tr></table>
+    <table><tr>
+        <th>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="dthv" placeholder="Nhập cạnh b"></td>
+    </tr>
+    <tr>
+        <td><button onclick="dientich()">Xác nhận</button></td>
+    </tr></table>
+    <table><tr>
+        <th>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</th>
+    </tr>
+        <tr>
+            <td>
+                <input type="text" id="chieudai" placeholder="Nhập cạnh a">&nbsp;
+                <input type="text" id="chieurong" placeholder="Nhập cạnh b">
+            </td>
+        </tr>
+        <tr><td><button onclick="chunhat()">Xác nhận</button></td></tr>
+    </table>
+<table>
+    <tr>
+        <th>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="tamgiac1" placeholder="cạnh a">&nbsp;
+            <input type="text" id="tamgian2" placeholder="Cạnh b">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="tamgiac()">Xác nhận</button>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 6: Giải phương trình bậc 1.</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="sox" placeholder="Nhập">&nbsp;
+            <input type="text" id="soy" placeholder="Nhập">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="bac1()">Xác nhận</button>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 7: Giải phương trình bậc 2.</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="a1" placeholder="nhập a">
+            <input type="text" id="b2" placeholder="Nhập b">
+            <input type="text" id="c3" placeholder="Nhập c">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="bac2()">Xác nhận</button>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="tuoi" placeholder="Nhập tuổi">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="sotuoi()">Xác nhận</button>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="canh1" placeholder="Nhập cạnh">
+            <input type="text" id="canh2" placeholder="Nhập cạnh">
+            <input type="text" id="canh3" placeholder="Nhập cạnh">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="canh()">Xác nhận</button>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 10: Viết chương trình tính giá điện.</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="giadien" placeholder="Nhập số kWh tiêu thụ">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="dien()">Xác nhận</button>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="thuenhap" placeholder="Nhập lương">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="thue()">Xác nhận</button>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="lai" placeholder="Nhập tiền">
+            <input type="text" id="thang" placeholder="Nhập tháng">
+            <input type="text" id="nam" >
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="p()">Xác nhận</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function doi(){
+        let C=parseInt(document.getElementById('doc').value);
+        let F = C * 9/5 + 32
+        alert('F' + F)
+    }
+    function met() {
+        let m=parseInt(document.getElementById('doimet').value);
+        let feet=m * 3.2808
+        alert('feet' + feet)
+    }
+    function dientich() {
+        let a=parseInt(document.getElementById('dthv').value);
+        let dt= a*a
+        alert('Diện tích' + dt)
+    }
+    function chunhat() {
+        let w= parseInt(document.getElementById('chieurong').value);
+        let h=parseInt(document.getElementById('chieudai').value);
+        let dtcn= w*h
+        alert('Diện tích :' + dtcn)
+    }
+    function tamgiac() {
+        let w= parseInt(document.getElementById('tamgiac1').value);
+        let h=parseInt(document.getElementById('tamgian2').value);
+        let dttg= (w*h)/2
+        alert('Diện tích :' +dttg )
+    }
+    function bac1() {
+        let y1=parseInt(document.getElementById('sox').value);
+        let y2=parseInt(document.getElementById('soy').value);
+        let x=-(y1/y2)
+        if (y1 === 0 && y2 === 0  ){
+            alert('Phương trình vô số nghiêm')
+        }if (y1===0 && y2 !=0){
+            alert('Phương trình vô số nghiệm')
+        }if (y1!= 0)
+            alert('Phương trình có nghiệm' + x )
+    }
+    function bac2() {
+        let a=parseInt(document.getElementById('a1').value);
+        let b=parseInt(document.getElementById('b2').value);
+        let c=parseInt(document.getElementById('c3').value);
+        let t=b*b-4*a*c
+        let x=(-b+ Math.sqrt(t))/2
+        let y=(-b- Math.sqrt(t))/2
+        let x1=-b/2*a
+        if (t>0){
+            alert('Phương trình tồn tại 2 nghiệm' + x + y)
+        }else if (t===0 ){
+            alert('Phương trình có nghiệm kép' + x1)
+        }if (t<0) {
+            alert('Phương trình vô nghiệm')
+        }
+    }
+    function sotuoi() {
+        let tuoi=parseInt(document.getElementById('tuoi').value);
+        if (tuoi >0 &&tuoi < 120){
+            alert('Đây là tuổi của bạn' + tuoi)
+        }else {
+            alert('Đây không phải tuổi của bạn')
+        }
+    }
+    function canh() {
+        let a = parseInt(document.getElementById('canh1').value);
+        let b = parseInt(document.getElementById('canh2').value);
+        let c = parseInt(document.getElementById('canh3').value);
+        if (a>0 && b>0 && c>0){
+            alert('a , b c là cạnh của hình tam giác')
+        }else {
+            alert('a , b , c khong phải là cạnh tam giác')
+        }
+        if ((a+b> c) && (b+c>a) && (a+c>b)){
+            alert('a , b c là cạnh của hình tam giác')
+        }else {
+            alert('a , b c không phải là cạnh của hình tam giác')
+        }
+    }
+    function dien() {
+        let sd=parseInt(document.getElementById('giadien').value);
+        let tongd=sd*3500;
+       alert('Tổng tiền;' + tongd);
+    }
+    function thue() {
+        let thue1=parseInt(document.getElementById('thuenhap').value);
+        if (thue1>80000000){
+            alert('Thuế là:' + thue1*35/100)
+        }else if (thue1>52000000 && thue1<80000000){
+            alert('Thuế là:' + thue1*30/100)
+        }else if (thue1>32000000 && thue1<52000000){
+            alert('Thuế là:' + thue1*25/100)}
+        else if (thue1>18000000 && thue1<32000000){
+            alert('Thuế là:' + thue1*20/100)}
+        else if (thue1>10000000 && thue1<18000000){
+            alert('Thuế là:' + thue1*15/100)}
+        else if (thue1>5000000 && thue1<10000000){
+            alert('Thuế là:' + thue1*10/100)}
+        if (thue1>0 && thue1<5000000){
+            alert('Thuế là:' + thue1*5/100)}
+    }
+    function p() {
+        let a=parseInt(document.getElementById('lai').value);
+        let b=parseInt(document.getElementById('thang').value);
+        let c = a*Math.pow(1.05,b) - a
+        alert(c)
+    }
+
+</script>
+</body>
+</html>
