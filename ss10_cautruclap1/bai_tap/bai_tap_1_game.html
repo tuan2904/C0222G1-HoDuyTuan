@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Hãy đoán xem</h2>
+<p><button onclick="doan()">Chơi</button></p>
+<script>
+    function doan() {
+        let n;
+        let m=Math.random()
+        do
+        {
+            n=prompt('Nhập số bạn đoán')
+            if (n!=m){
+                alert('Sai')
+            }else ('Đúng')
+            break;
+        }while (true)
+
+    }
+</script>
+</body>
+</html>
