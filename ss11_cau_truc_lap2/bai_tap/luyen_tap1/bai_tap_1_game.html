@@ -10,12 +10,12 @@
 <script>
     function doan() {
         let n;
-        let m=Math.random()
+        let m=Math.random()*10
         do
         {
             n=prompt('Nhập số bạn đoán')
             if (n!=m){
-                alert('Sai')
+                console.log('Sai')
             }else ('Đúng')
             break;
         }while (true)
