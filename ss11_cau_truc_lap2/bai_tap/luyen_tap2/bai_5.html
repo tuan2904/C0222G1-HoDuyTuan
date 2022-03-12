@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <td>
+        <input type="text" id="lai" placeholder="Nhập tiền">
+        <input type="text" id="thang" placeholder="Nhập tháng">
+    </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="p()">Xác nhận</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function p() {
+        let a = parseInt(document.getElementById('lai').value);
+        let b = parseInt(document.getElementById('thang').value);
+        let c = a * Math.pow(1.05, b) - a
+        alert(c)
+    }
+</script>
+</body>
+</html>
