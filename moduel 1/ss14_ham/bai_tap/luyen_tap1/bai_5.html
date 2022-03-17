@@ -6,11 +6,18 @@
 </head>
 <body>
 <script>
-    let a =[
-        ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe','Regulus'],
-        ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major','Leo']
-    ]
-
+   function ab() {
+       let d = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+       let h = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+        for (let i=0;i<d.length;i++){
+                if (d[i]===n){
+                    return h[i]
+                }else if (h[i]===n) {
+                    return d[i]
+                }
+        }
+   }let n=prompt()
+    alert(ab(n))
 </script>
 </body>
 </html>
