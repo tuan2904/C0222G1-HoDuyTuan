@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class temperature{
+        constructor(doc) {
+            this.doc=doc
+        }
+        doiDoF(){
+            console.log(9/5*this.doc+32)
+        }
+        doiK(){
+            console.log(this.doc+273,15)
+        }
+    }let a=new temperature(25)
+    a.doiDoF()
+    a.doiK()
+</script>
+</body>
+</html>

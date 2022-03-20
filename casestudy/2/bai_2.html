@@ -6,13 +6,22 @@
 </head>
 <body>
 <script>
-    let n='o,u,i,a,e'
-    let b='O,U,I,A,E'
-    let c=prompt('Nhập')
-    if (c === n){
-        alert('đây là kí tự nguyên âm')
-    }if (c === b){
-        alert('đây là kí tự phụ âm')
+    let a = prompt('Nhập')
+    switch (a) {
+        case 'o':
+        case 'u':
+        case 'i':
+        case 'a':
+        case 'e':
+        case 'O':
+        case 'U':
+        case 'I':
+        case 'A':
+        case 'E':
+            alert('Đây là từ nguyên âm')
+            break
+        default:
+            alert('Đây là phụ âm')
     }
 </script>
 </body>

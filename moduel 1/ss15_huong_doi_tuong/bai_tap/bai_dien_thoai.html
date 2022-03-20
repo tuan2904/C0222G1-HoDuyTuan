@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   class mobile{
+       constructor(tt,pin,editor,den,sent) {
+           this.pin=pin
+           this.tt=tt
+           this.editor=editor
+           this.den=den
+           this.sent=sent
+       }
+       status(){
+           if (this.tt === 'bật'){
+               console.log("Điên thoại đang bật")
+           }else if (this.tt === 'tắt'){
+               console.log('Bật điện thoại lên')
+           }
+       }
+       test(){
+           if (this.tt === 'bật'){
+               console.log('đã bật')
+           }else if (this.tt === 'tắt'){
+               return 'đã tắt'
+           }
+       }
+       charger(){
+           if (this.pin> 10 || this.pin ==='tắt') {
+               console.log('Đã cắm sạc')
+           }
+       }
+       send(iphone) {
+           console.log(this.send === iphone)
+       }
+
+   }let a=new mobile('tắt',20)
+    a.status()
+    a.test()
+    a.charger()
+    a.send(prompt(''))
+</script>
+</body>
+</html>
