@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Lamp {
+        constructor(status, battery) {
+            this.status = status;
+            this.battery = battery;
+        }
+
+        trangThaiBongDen() {
+            if (this.battery === 0) {
+                console.log('den het pin r');
+            } else if (this.battery > 0) {
+                console.log('bong den dang ' + this.status + ' pin hien tai la ' + this.battery);
+            }
+        }
+    }
+
+    class SwitchButton {
+        constructor() {
+        }
+
+        turnOff(lampObj) {
+            lampObj.status = 'tat';
+            console.log(lampObj.status)
+
+        }
+
+        turnOn(lampObj) {
+            lampObj.status = 'bat';
+            console.log(lampObj.status)
+            lampObj.battery--;
+        }
+    }
+
+    let a = new Lamp('tat', 10);
+    a.trangThaiBongDen()
+    let switchButton1 = new SwitchButton('tat', 10);
+    for (let i = 0; i < 10; i++) {
+        switchButton1.turnOn(a);
+        a.trangThaiBongDen()
+        switchButton1.turnOff(a);
+        a.trangThaiBongDen()
+    }
+</script>
+</body>
+</html>

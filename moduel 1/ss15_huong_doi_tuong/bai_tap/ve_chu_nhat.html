@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<!--<button id="doi" onclick="doiSo()">Đổi số</button>-->
+<script>
+    class chuNh {
+        constructor(width,height) {
+            this.width=width
+            this.hetght=height
+        }
+        dt(){
+            console.log('Diện tích là '+ this.hetght *this.width);
+        }
+        cv(){
+            console.log('Chu vi là' +(this.width+ this.hetght)/2)
+        }}
+    let a=document.getElementById('myCanvas');
+    let c= a.getContext("2d");
+    c.fillRect(4,4,150,75);
+    let b=new chuNh(8,9)
+    b.dt()
+    b.cv()
+    //     if ()
+    // }
+</script>
+</body>
+</html>

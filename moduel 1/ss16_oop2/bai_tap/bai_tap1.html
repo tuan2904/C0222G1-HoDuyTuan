@@ -12,12 +12,11 @@
         this.top = top;
         this.left = left;
         this.size = size;
-
         this.getHeroElement = function(){
             return '<img width="'+ this.size + '"' +
                 ' height="'+ this.size + '"' +
                 ' src="' + this.image +'"' +
-                ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+                ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" alt=""  />';
         }
 
         this.moveRight = function(){
@@ -27,7 +26,7 @@
 
     }
 
-    var hero = new Hero('pikachu.png', 20, 30, 200);
+    let hero = new Hero('https://raw.githubusercontent.com/codegym-vn/objects/master/pikachu.png', 20, 30, 200);
 
     function start(){
         if(hero.left < window.innerWidth - hero.size){

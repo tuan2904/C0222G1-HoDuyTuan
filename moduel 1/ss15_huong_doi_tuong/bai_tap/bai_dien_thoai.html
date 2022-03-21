@@ -7,41 +7,62 @@
 <body>
 <script>
    class mobile{
-       constructor(tt,pin,editor,den,sent) {
-           this.pin=pin
-           this.tt=tt
-           this.editor=editor
-           this.den=den
-           this.sent=sent
+       constructor(pin,name,status) {
+           this.pin=pin;
+           this.name=name;
+           this.status=status;
+           this.editor=[];
+           this.den=[];
+           this.sent=[];
        }
-       status(){
-           if (this.tt === 'bật'){
-               console.log("Điên thoại đang bật")
-           }else if (this.tt === 'tắt'){
-               console.log('Bật điện thoại lên')
+       trangThai(){
+           if (this.status === 'tắt'){
+               console.log(" cần bật diên thoại lên")
+           }else if (this.status === 'bật'){
+               console.log('điện thoại đang bật')
            }
        }
        test(){
-           if (this.tt === 'bật'){
-               console.log('đã bật')
-           }else if (this.tt === 'tắt'){
-               return 'đã tắt'
+           if (this.status === 'bật'){
+                console.log('đã bật')
+           }else if (this.status === 'tắt'){
+              console.log('đang tắt')
            }
        }
        charger(){
-           if (this.pin> 10 || this.pin ==='tắt') {
-               console.log('Đã cắm sạc')
+           if (this.pin < 20 && this.status ==='tắt') {
+               console.log('Cần bật máy mới sạc được')
+           }else if (this.pin>20 && this.status === 'bật') {
+               console.log('còn tốt không cần sạc')
            }
        }
-       send(iphone) {
-           console.log(this.send === iphone)
+       soanTinNhan(tinnhan) {
+                console.log( this.name +  ' đang soạn ' + tinnhan )
+           this.editor.push(tinnhan)
+           --this.pin
+           console.log(this.name + ' còn ' + this.pin + '% pin ')
+       }
+       thuDen(dienthoaiobj){
+                dienthoaiobj.den.push(this.den)
+                console.log(this.name + ' đã nhận tin nhắn từ ' + dienthoaiobj.name)
+
+       }
+       thuGui(dienthoaiobj){
+         //
+           console.log(' thư đã gửi là : ' + this.editor.join())
+           --this.pin
+                console.log(' Pin còn ' + this.pin +'%')
        }
 
-   }let a=new mobile('tắt',20)
-    a.status()
-    a.test()
-    a.charger()
-    a.send(prompt(''))
+   }
+   let nokia=new mobile(28,'nokia','bật')
+   let iphone=new mobile(60,'iphone','bật')
+    nokia.trangThai()
+    nokia.test()
+    nokia.charger()
+    nokia.soanTinNhan('hello')
+    nokia.thuDen(iphone)
+    nokia.thuGui()
 </script>
 </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class fruit{
+        constructor(name,weight) {
+            this.name =name
+            this.weight=weight
+        }
+
+    }
+    class huMan{
+        constructor(name,weight) {
+            this.name=name
+            this.weight=weight
+        }
+        checkFruit(obj){
+            if (obj.weight>0){
+                console.log(this.name +  ': quả '  + obj.name +' này ăn được ')
+            }else {
+                console.log(this.name +': không ăn được')
+            }
+        }
+        eatFruit(obj){
+            console.log(this.name +' : ăn ' + obj.name + ' Ngon ')
+            this.weight++
+            obj.weight--
+            console.log(obj.name + ' còn ' + obj.weight + ' g ' + ' Cân nặng còn ' + this.weight + ' cân ' )
+        }
+        saying(tinNhan){
+                console.log(this.name + ': ' + tinNhan)
+        }
+    }
+    let apple=new fruit('apple',10)
+    let adam=new huMan('adam',50)
+    let eva=new huMan('eva',60)
+    adam.checkFruit(apple)
+    eva.saying('Ăn tiếp đi')
+    adam.eatFruit(apple)
+    adam.saying('Ngon')
+    eva.eatFruit(apple)
+    eva.saying('Ngon')
+    // a.eatFruit()
+</script>
+</body>
+</html>
